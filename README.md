@@ -9,7 +9,7 @@
 docker run --rm -v $PWD:/g8out fernandoacorreia/g8 fernandoacorreia/basic-scala-project --name=my-project
 ```
 
-This will generate a new project based on the [`fernandoacorreia/basic-scala-project`](https://github.com/fernandoacorreia/basic-scala-project) template and place it in `my-project` under the current directory.
+This will generate a new project based on the [`fernandoacorreia/basic-scala-project.g8`](https://github.com/fernandoacorreia/basic-scala-project.g8) template and place it in `my-project` under the current directory.
 
 Or you can set the project properties interactivelly:
 
