@@ -1,25 +1,29 @@
 # giter8 docker image
 
-[Giter8](https://github.com/n8han/giter8) command-line tool wrapped to Docker image.
+[Giter8](https://github.com/n8han/giter8) command-line tool wrapped as a Docker image.
 
-To use it:
+
+## Usage
+
 ```
-docker run --rm -v $PWD:/g8out avastsoftware/g8 unfiltered/unfiltered.g8 --name=my-new-website
+docker run --rm -v $PWD:/g8out fernandoacorreia/g8 fernandoacorreia/basic-scala-project --name=my-project
 ```
 
-This will take generate a new `my-new-website` project based on the [`unfiltered/unfiltered.g8`](https://github.com/unfiltered/unfiltered.g8) template and place it in `my-new-website` under the current directory.
+This will generate a new project based on the [`fernandoacorreia/basic-scala-project`](https://github.com/fernandoacorreia/basic-scala-project) template and place it in `my-project` under the current directory.
 
 Or you can set the project properties interactivelly:
+
 ```
-> docker run --rm -v $PWD:/g8out -it avastsoftware/g8 unfiltered/unfiltered.g8
+docker run --rm -it -v $PWD:/g8out test fernandoacorreia/basic-scala-project.g8
+```
 
-This template generates an Unfiltered project
 
-name [My Web Project]: my-new-website
-version [0.1.0-SNAPSHOT]:
-scala_version [2.12.4]:
-sbt_version [1.1.0]:
-unfiltered_version [0.9.1]:
+## File ownership
 
-Template applied in /g8out/./my-new-website
+The files will be initially owned by the `root` user (UID 0). After creating them, change the ownership to your user.
+
+For instance, on a Linux system with `sudo`:
+
+```
+sudo chown -R $USER: *
 ```
