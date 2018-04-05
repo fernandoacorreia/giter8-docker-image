@@ -14,9 +14,6 @@ RUN curl -s curl https://raw.githubusercontent.com/foundweekends/conscript/maste
 # install giter8 using conscript
 RUN ~/bin/cs n8han/giter8
 
-# trigger g8 to install dependencies
-RUN ~/bin/g8 --version
-
 # image settings
 VOLUME /g8out
 WORKDIR /g8out
