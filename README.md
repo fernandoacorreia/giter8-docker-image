@@ -14,7 +14,7 @@ This will generate a new project based on the [`fernandoacorreia/basic-scala-pro
 Or you can set the project properties interactivelly:
 
 ```
-docker run --rm -it -v $PWD:/g8out test fernandoacorreia/basic-scala-project.g8
+docker run --rm -it -v $PWD:/g8out fernandoacorreia/g8 fernandoacorreia/basic-scala-project.g8
 ```
 
 
@@ -26,4 +26,13 @@ For instance, on a Linux system with `sudo`:
 
 ```
 sudo chown -R $USER: *
+```
+
+
+## Help
+
+To view giter8's help:
+
+```
+docker run --rm -it -v $PWD:/g8out fernandoacorreia/g8 --help
 ```
